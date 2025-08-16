@@ -78,10 +78,11 @@ html , body{
     height: 100vh;
     background-color: #191818;
 }
-@keyframes anime {
+@keyframes loader-anime {
     0%{
         font-family: font1;
         opacity: 1;
+        transform: translate(0,0);
     } 
     48%{
         font-family: font1;
@@ -137,6 +138,15 @@ html , body{
     line-height: 7.5vw;
     text-transform: uppercase;
     height: fit-content;
+}
+ #hero1::before{
+    content: "01";
+    position:absolute;
+    font-size: 3.3vw;
+    margin-left: -8vw;
+    margin-top: -2.5vw;
+    font-weight: 500;
+    font-family: fontSer;
 }
 .hero:nth-child(2){
     margin-top:13vh;
@@ -220,6 +230,15 @@ html , body{
     font-size: 7vw;
     text-transform: uppercase;
 }
+#page4 h1::before{
+    content: "03";
+    position:absolute;
+    font-size: 3.3vw;
+    margin-left: -8vw;
+    margin-top: 1vw;
+    font-weight: 500;
+    font-family: fontSer;
+}
 #page4-content .underLine{
     margin: 3vw 0vw;
     width: 100%;
@@ -273,4 +292,116 @@ html , body{
 #page5{
     min-height: 100vh;
     width: 100%;
+    margin-top: 10vw;
+}
+#page5 .elem{
+    /* background-color: red; */
+    white-space: nowrap;
+    overflow-x: hidden;
+}
+.elem h1{
+   font-size: 7vw;
+   font-family: font1;
+   line-height: 7vw;
+   font-weight: 400;
+   text-transform: uppercase;
+   -webkit-text-stroke: 0.1vw white;
+   color: transparent;
+   display: inline-block;
+   margin-right: 16px;
+   animation-name: anime;
+   animation-duration: 10s;
+   animation-timing-function: linear;
+   animation-iteration-count: infinite;
+   margin-bottom: 1vw;
+}
+@keyframes anime {
+    to{
+        transform: translateX(0);
+    }
+    from{
+        transform: translateX(calc(-100% - 20px));
+    }
+}
+#page5 .elem2{
+    /* background-color: red; */
+    white-space: nowrap;
+    overflow-x: hidden;
+}
+.elem2 h1{
+   font-size: 7vw;
+   font-family: font1;
+   line-height: 7vw;
+   font-weight: 400;
+   text-transform: uppercase;
+   -webkit-text-stroke: 0.1vw white;
+   color: transparent;
+   display: inline-block;
+   margin-right: 16px;
+   transform: translateX(calc(-100% - 20px));
+   animation-name: anime;
+   animation-duration: 10s;
+   animation-timing-function: linear;
+   animation-iteration-count: infinite;
+   animation-direction: reverse;
+   margin-bottom: 1vw;
+}
+.elem span{
+    font-family: fontSer;
+    color: transparent;
+}
+.elem2 span{
+    font-family: fontSer;
+    color: transparent;
+}
+#footer{
+    height: 85vh;
+    width: 100%;
+    /* background-color: red; */
+    position: relative;
+    padding-left: 28%;
+}
+#footer h1{
+    font-size: 8vw;
+    font-family: font1;
+    text-transform: uppercase;
+}
+#footer h1::before{
+    content: "04";
+    position:absolute;
+    font-size: 3.3vw;
+    margin-left: -8vw;
+    margin-top: 1vw;
+    font-weight: 500;
+    font-family: fontSer;
+}
+.underline{
+    width: 100%;
+    height: 0.2vw;
+    background-color: #ffffffcb;
+    margin: 2vw 0;
+}
+#footer-div{
+    /* background-color: rebeccapurple; */
+    display: flex;
+    justify-content: space-between;
+    padding: 1vw 0;
+}
+.box{
+    margin-right: 8vw;
+}
+.box h6{
+    font-size: 1.2vw;
+    font-family: font1;
+    margin-bottom: 2vw;
+}
+.box h5{
+    font-size: 2vw;
+    font-family: font1;
+    font-weight: 500;
+}
+#footer>h5{
+   font-size: 1.2vw;
+   font-weight: 400;
+   font-family: font1;
 }
