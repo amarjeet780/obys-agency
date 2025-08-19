@@ -93,9 +93,11 @@ function csrsAnmation(){
 })
  Shery.makeMagnet("#nav-part2 h4");
 }
-document.querySelector("#flag").addEventListener("mousemove", function(dets){
+
+function flagAnimation(){
+document.addEventListener("mousemove", function(dets){
     gsap.to("#flag" , {
-        x:dets.x ,
+        x:dets.x,
         y:dets.y ,
     })
 })
@@ -109,6 +111,7 @@ document.querySelector("#hero2").addEventListener("mouseleave", function(){
         opacity:0, 
     })
 })
+}
 
 var videoContainer = document.querySelector("#video-container");
 var video = document.querySelector("#video-container video")
@@ -135,7 +138,7 @@ videoContainer.addEventListener("mouseleave" , function(){
 
     var flag=0;
     videoContainer.addEventListener("click" , function(){
-        if(flag==0){
+        if(flag == 0){
         video.play()
         video.style.opacity = 1;
 
@@ -146,7 +149,7 @@ videoContainer.addEventListener("mouseleave" , function(){
         flag=1;
     }
     else{
-         video.pause()
+         video.pause();
         video.style.opacity = 0;
 
         document.querySelector("#cursor").innerHTML = `<i class="ri-play-fill"></i>`
@@ -184,5 +187,6 @@ textAnime.addEventListener("mouseleave" , function(){
 
 loadindgAnimation();
 csrsAnmation();
+flagAnimation();
 locomotiveAnimation();
 sheryAnimation();
