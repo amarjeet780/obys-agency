@@ -18,11 +18,11 @@ html , body{
 }
 #crsr{
     width: 2.8vw;
-    height: 2.8vw;
+    height: 2.8vw; 
     border: 1px solid rgba(255, 255, 255, 0.635);
     border-radius: 50%;
     position: fixed;
-    z-index: 99;
+    z-index: 99; 
     mix-blend-mode: difference;
     transform: translate(-50% , -50%);
 }
@@ -167,6 +167,19 @@ html , body{
     font: 500;
     border-bottom: 0.5vw solid transparent;
 }
+#flag{
+    height: 25vw;
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    left: 0;
+    transform: translate(-50% , -50%);
+}
+#hero2{
+    /* background-color: red; */
+    z-index: 999;
+    position: relative;
+}
 #page2{
     width: 100%;
     height: 100vh;
@@ -178,13 +191,13 @@ html , body{
     left: 32%;
     position:relative;
     background-image:url("https://obys.agency/wp-content/uploads/2022/11/Showreel-2022-preview-1.jpg");
+    background-size: cover;
+    position: center;
 }
-#video-container img{  
-    position: absolute;
+#video-container video{
     width: 100%;
     height: 100%;
-    top:0;
-    object-fit: cover;
+    opacity: 0;
 }
 #video-container #cursor{
     width: 5vw;
@@ -210,8 +223,143 @@ html , body{
 #page3{
     min-height: 100vh;
     width: 100%;
-    background-color: #242323;
+    /* background-color: #242323; */
     position:relative;
+}
+#page3 h1{
+    font-family: font1;
+    font-size: 7vw;
+    text-transform: uppercase;
+    margin-left: 28vw;
+}
+#page3 h1::before{
+    content: "02";
+    position:absolute;
+    font-size: 3.3vw;
+    margin-left: -8vw;
+    margin-top: 1vw;
+    font-weight: 500;
+    font-family: fontSer;
+}
+#page3 .underLine{
+    margin: 3vw 0vw;
+    width: 100%;
+    height: 0.1vw;
+    background-color: #fff;
+    margin-left: 28vw 2vw;
+}
+#img-div-container{
+    /* background-color: red; */
+    position:relative;
+    padding: 1vw;
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+}
+.img-div{
+    width: 25vw;
+    height: 35vw;
+    /* background-color: blue; */
+    position:relative;
+    overflow: hidden;
+    flex-shrink: 0;
+    margin: 5vw 2vw;
+}
+.img-div img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+.img-div:nth-child(1){
+    width: 22vw;
+    height: 28vw;
+    margin-bottom: 11vw;
+}
+.img-div:nth-child(5){
+    width: 22vw;
+    height: 28vw;
+}
+#page3-circle1{
+    width: 20vw;
+    height: 20vw;
+    position: relative;
+    border: 1px solid rgba(255, 255, 255, 0.728);
+    border-radius: 50%;
+    margin-left: 10vw;
+    margin-bottom: 3vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#page3-circle1 i{
+   font-size: 10vw;
+   color: transparent;
+   -webkit-text-stroke: 2px #fff;
+}
+#page3-circle2{
+    width: 20vw;
+    height: 20vw;
+    position: relative;
+    border: 1px solid rgba(255, 255, 255, 0.728);
+    border-radius: 50%;
+    margin-right: 3vw;
+    margin-bottom: 20vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#page3-circle2 i{
+   font-size: 10vw;
+   color: transparent;
+   -webkit-text-stroke: 2px #fff;
+   rotate: 315deg;
+}
+.circle1-in{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background-color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    scale: 0;
+    opacity: 0;
+}
+.circle1-in p{
+    font-family: font1;
+    font-size: 1vw;
+    color: black;
+    font-weight: 500;
+    width: 70%;
+    scale: 0;
+    opacity: 0;
+}
+#page3-circle1:hover .circle1-in{
+    scale: 1;
+    transition: all ease 0.3s;
+    transition-delay: 0.3s;
+    opacity: 1;
+}
+#page3-circle1:hover p{
+    scale: 1;
+    transition: all ease 0.3s;
+    transition-delay: 0.3s;
+    opacity: 1;
+}
+#page3-circle2:hover .circle1-in{
+    scale: 1;
+    transition: all ease 0.3s;
+    transition-delay: 0.3s;
+    opacity: 1;
+}
+#page3-circle2:hover p{
+    scale: 1;
+    transition: all ease 0.3s;
+    transition-delay: 0.3s;
+    opacity: 1;
 }
 #page4{
     min-height: 100vh;
@@ -405,3 +553,9 @@ html , body{
    font-weight: 400;
    font-family: font1;
 }
+
+._canvas_container{
+    z-index: 999990 !important;
+    pointer-events: none;
+}
+

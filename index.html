@@ -12,6 +12,9 @@
     href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css"
     rel="stylesheet" />   
             <!-- icon play cdn  -->
+
+            <!-- Animate css cdn codepen for letter anim.. -->
+             <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -34,7 +37,7 @@
         </div>
     </div>
     <div id="main">
-        <div id="page1">
+        <div id="page1" data-scroll data-scroll-speed="-1">
             <div id="nav">
                 <div id="nav-part1">
     <img src="./fav-obys.png" alt="">
@@ -50,23 +53,59 @@
         </div>
         <div class="hero" id="hero2">
             <h2>web/</h2>
-            <h2>exprience</h2>
+            <h2>Graphics</h2>
         </div>
         <div class="hero" id="hero3">
             <h1>exprience</h1>
         </div>
+        <img id="flag" src="https://obys.agency/wp-content/uploads/2022/03/Flag.jpg" alt="">
         </div>
-        <div id="page2">
+        <div id="page2" data-scroll data-scroll-speed="1">
             <div id="video-container">
-                <img src="https://obys.agency/wp-content/uploads/2022/11/Showreel-2022-preview-1.jpg" alt="">
                 <div id="cursor">
                     <i class="ri-play-fill"></i>
                 </div>
-                <video autoplay loop muted src="https://obys.agency/wp-content/uploads/2024/12/Obys-Showreel-2024.mp4"></video>
+                <video loop muted src="https://obys.agency/wp-content/uploads/2024/12/Obys-Showreel-2024.mp4"></video>
             </div>
         </div>
-        <div id="page3"></div>
-        <div id="page4">
+        <div id="page3" data-scroll data-scroll-speed="-1">
+              <h1>our project</h1>
+            <div class="underLine"></div>
+            <div id="img-div-container">
+                <div class="img-div">
+                    <img src="../Olga_Prudka_1 - Copy.png" alt="">
+                    <img src="../Olga_Prudka_2 (1) - Copy.png" alt="">
+                </div>
+                 <div class="img-div">
+                    <img src="../AIM-1 - Copy.png" alt="">
+                    <img src="../AIM-2 - Copy.png" alt="">
+                </div>
+                <div id="page3-circle1">
+                    <i class="ri-arrow-down-fill"></i>
+                    <div class="circle1-in">
+                        <p>We are thrilled to have you on board
+                            we hope you enjoyed the projrcts ❤️. 
+                        </p>
+                    </div>
+                </div>
+                <div id="page3-circle2">
+                    <i class="ri-arrow-down-fill"></i>
+                     <div class="circle1-in">
+                        <p>It will make you WOW 😉. 
+                        </p>
+                    </div>
+                </div>
+                 <div class="img-div">
+                    <img src="../OCHI - Copy.png" alt="">
+                    <img src="../OCHI_2-1 - Copy.png" alt="">
+                </div> 
+                <div class="img-div">
+                    <img src="../Laxer_1-2.png" alt="">
+                    <img src="../Laxer_2 - Copy.png" alt="">
+                </div>
+            </div>
+        </div>
+        <div id="page4" data-scroll data-scroll-speed="1">
             <div id="page4-content">
             <h1>about Obys</h1>
             <div class="underLine"></div>
@@ -146,7 +185,7 @@ And we will help you with the pleasure.</p>
              <div class="underLine"></div>
             </div>
         </div> 
-        <div id="page5">
+        <div id="page5" data-scroll data-scroll-speed="-1">
             <div class="elem">
                 <h1>fashion - <span>sport</span> - technology -</h1>
                 <h1>fashion - <span>sport</span> - technology -</h1>
@@ -164,7 +203,7 @@ And we will help you with the pleasure.</p>
                 <h1>travel - science - <span>partner</span> -</h1>
             </div>
         </div> 
-        <div id="footer">
+        <div id="footer" data-scroll data-scroll-speed="-2">
             <h1>lets create</h1>
             <div class="underline"></div>
             <div id="footer-div">
@@ -193,8 +232,22 @@ And we will help you with the pleasure.</p>
       <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/gsap.min.js" integrity="sha512-NcZdtrT77bJr4STcmsGAESr06BYGE8woZdSdEgqnpyqac7sugNO+Tr4bGwGF3MsnEkGKhU2KL2xh6Ec+BqsaHA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/ScrollTrigger.min.js" integrity="sha512-P2IDYZfqSwjcSjX0BKeNhwRUH8zRPGlgcWl5n6gBLzdi4Y5/0O4zaXrtO4K9TZK6Hn1BenYpKowuCavNandERg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <!-- Three.js is needed for 3d Effects -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/0.155.0/three.min.js"></script>
+
+<!-- ControlKit is needed for Debug Panel -->
+<script src="https://cdn.jsdelivr.net/gh/automat/controlkit.js@master/bin/controlKit.min.js"></script>
     <script  type="text/javascript"  src="https://unpkg.com/sheryjs/dist/Shery.js"></script> 
     <!-- magnetic effect -->
+
+    <!-- jQuery cdn -->
+     <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+     <!-- lettering js cdn -->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/lettering.js/0.6.1/jquery.lettering.min.js" integrity="sha512-VJ/iYbiu1eJ6yLimfTi65t2R9TFcG5D9X8ZCfbbEFhTfPnKJh8byoKXEawi5ScJZBYL1eiirL1+MczZDx0Tz9Q==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+      <!-- textillate js cdn -->
+       <script src="
+https://cdn.jsdelivr.net/npm/textillate@0.4.1/jquery.textillate.min.js
+"></script>
     <script src="app.js"></script>
 </body>
 </html>
